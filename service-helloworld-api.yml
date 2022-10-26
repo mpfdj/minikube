@@ -1,0 +1,17 @@
+---
+# https://minikube.sigs.k8s.io/docs/handbook/accessing/
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-api
+  labels:
+    name: helloworld-api
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: helloworld-api

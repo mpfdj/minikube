@@ -1,0 +1,25 @@
+---
+# https://hub.docker.com/r/testcontainers/helloworld
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+  labels:
+    app: helloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: helloworld
+        image: registry.hub.docker.com/testcontainers/helloworld:latest
+        ports:
+        - containerPort: 8080
+        - containerPort: 8081

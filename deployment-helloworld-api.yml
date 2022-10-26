@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-api-deployment
+  labels:
+    app: helloworld-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helloworld-api
+  template:
+    metadata:
+      labels:
+        app: helloworld-api
+    spec:
+      containers:
+      - name: helloworld-api
+        image: registry.hub.docker.com/miel1980/helloworld-api:0.0.1
+        ports:
+        - containerPort: 8080
