@@ -7,14 +7,13 @@ https://github.com/thomaspoignant/hello-world-rest-json
 
 kubectl get pods --all-namespaces
 kubectl get pods -A
-
 minikube dashboard
 
-
-conainter > pod > namespace
+container > pod > namespace
 
 
 # Add aliases to .bashrc to use minikube commands in WSL
+
 vim ~/.bashrc
 alias curl="cmd.exe /c curl"
 #alias kubectl="cmd.exe /c kubectl"
@@ -27,6 +26,7 @@ which minikube.exe
 
 
 # There is one easy and effective way to push your local Docker image directly to minikube, which will save time from building the images in minikube again.
+
 minikube image load <image name>
 minikube image load registry/keycloak:latest
 minikube image ls
@@ -79,13 +79,14 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 
 # (Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours])
-nana janashia
-https://www.youtube.com/watch?v=X48VuDVv0do
-https://gitlab.com/nanuchi/youtube-tutorial-series
-
+- Nana Janashia
+- https://www.youtube.com/watch?v=X48VuDVv0do
+- https://gitlab.com/nanuchi/youtube-tutorial-series
 > 2:38:07 - Persisting Data in K8s with Volumes NOG EENS BEKIJKEN
 
 > 2:58:38 - Deploying Stateful Apps with StatefulSet
+
+- https://www.youtube.com/watch?v=s_o8dwzRlu4 (Kubernetes Crash Course for Absolute Beginners [NEW])
 
 
 kubectl create deployment nginx-deploy --image=nginx
@@ -217,9 +218,14 @@ templating engine
 
 
 
+# Deploying Stateful Apps with StatefulSet
 
-
-
+# K8s Services explained
+- ClusterIP
+- Headless
+- NodePort
+- LoadBalancer
+kubectl get pod -o wide
 
 
 # How Prometheus Monitoring works | Prometheus Architecture explained
